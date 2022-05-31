@@ -1,0 +1,73 @@
+.keyboard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    background-color: rgb(12, 75, 75);
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+    /* height: 100px; */
+}
+
+.keyboard--hidden {
+    bottom: -100%;
+}
+
+.keyboard-keys {
+    text-align: center;
+}
+
+.keyboard-key {
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    margin: 3px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.2);
+    color: #ffffff;
+    outline: none;
+    font-size:1.05rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+
+}
+
+.keyboard-key:active {
+    background-color: rgba(255,255,255,0.12);
+}
+
+.keyboard-key-wide {
+    width: 12%;
+}
+.keyboard-key-extra-wide {
+    width: 36%;
+    max-width: 500px;
+}
+
+.keyboard-key-activale::after {
+content: '';
+top: 10px;
+right: 10px;
+position: absolute;
+width: 8px;
+height: 8px;
+background-color: rgba(0,0,0,0.4);
+border-radius: 50%;
+}
+
+.keyboard-key-active::after {
+background-color: green;
+}
+
+.keyboard-key-dark {
+    background-color: rgba(0,0,0,0.25);
+}
